@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapoğlu | Bilişim Çözümleri</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assests\faviconeski.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="frontend\style.css">
+</head>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+  <div class="container position-relative">
+    
+    <!-- Logo -->
+    <a class="navbar-brand position-absolute start-50 translate-middle-x d-none d-lg-block py-2" href="#">
+      <img src="assests\kapoğlu_png.png"  alt="Logo" class="img-fluid logo-img" >
+    </a>
+    
+    <!-- Mobil için Logo -->
+    <a class="navbar-brand d-lg-none py-2 mobile-logo" href="#">
+      <img src="assests\kapoğlu_png.png" alt="Logo" class="img-fluid logo-img">
+    </a>
+    
+    <!-- Hamburger Menü (Mobil) -->
+    <button class="navbar-toggler ms-auto border-0 shadow-none" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menü -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-end">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold px-3 border-0" href="#hakkimizda">Hakkımızda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold px-3 border-0" href="#hizmetler">Hizmetler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold px-3 border-0" href="#iletisim">İletişim</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="text-white d-flex align-items-center justify-content-center text-center py-5 py-md-6 py-sm-4" style="min-height: 70vh;">
+  <div class="container py-5">
+    <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">Kapoğlu Bilişim</h1>
+    <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">Yenilikçi çözümlerle dijital geleceğe yön veriyoruz.</p>    
+    <a href="#iletisim" class="btn btn-primary btn-lg rounded-pill px-4 py-2 fw-semibold animate__animated animate__fadeInUp animate__delay-1s ">Bize Ulaşın</a>
+  </div>
+</section>
+
+
+<!-- Hakkımızda Section -->
+<section id="hakkimizda" class="py-5 py-lg-6 bg-light position-relative overflow-hidden">
+  <div class="container py-4">
+    <div class="row align-items-start g-5">
+      
+      <!-- Sol Taraf: Metin -->
+      <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">Biz Kimiz?</span>
+        <h2 class="fw-bold mb-4 text-dark display-5">Hakkımızda</h2>
+        <p class="text-muted">KAPOĞLU BİLİŞİM A.Ş., hızla gelişen teknoloji dünyasında yenilikçi çözümleri ve müşteri odaklı yaklaşımıyla öne çıkan bir bilişim şirketidir. Kuruluşundan bu yana, araştırma ve geliştirme faaliyetlerine önem vererek müşterilerine en uygun, en güncel teknolojileri sunmayı hedeflemektedir.</p>
+        <p class="text-muted">Uzman ekibiyle her zaman çağın gerekliliklerine uyum sağlayan KAPOĞLU BİLİŞİM, sadece müşterilerine değil, çalışanlarına da yatırım yaparak sürdürülebilir başarıyı ön planda tutar. Eğitim ve gelişim fırsatlarıyla ekip performansını desteklerken, sektörde kalıcı ve güçlü bir etki bırakmayı amaçlar.</p>
+      </div>
+
+<!-- Orta Kısım: Kartlar -->
+<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+  <div class="d-flex flex-column gap-3">
+    
+    <!-- Kart 1 -->
+    <div class="p-3 bg-white rounded-4 shadow-sm text-center h-100 hover-shadow transition">
+      <i class="bi bi-lightning-charge fs-1 text-warning mb-2"></i>
+      <h6 class="fw-semibold">Hızlı Çözüm</h6>
+      <p class="small text-muted mb-0">İhtiyaçlarınıza hızlı ve etkili teknolojik çözümler sunarız.</p>
+    </div>
+    
+    <!-- Kart 2 -->
+    <div class="p-3 bg-white rounded-4 shadow-sm text-center h-100 hover-shadow transition">
+      <i class="bi bi-shield-check fs-1 text-success mb-2"></i>
+      <h6 class="fw-semibold">Güvenlik</h6>
+      <p class="small text-muted mb-0">Verilerinizi ve sistemlerinizi maksimum güvenlikle koruruz.</p>
+    </div>
+    
+    <!-- Kart 3 -->
+    <div class="p-3 bg-white rounded-4 shadow-sm text-center h-100 hover-shadow transition">
+      <i class="bi bi-globe-central-south-asia fs-1 text-info mb-2"></i>
+      <h6 class="fw-semibold">Küresel Bakış</h6>
+      <p class="small text-muted mb-0">Yalnızca bugünü değil, geleceği de hedefleyen çözümler üretiriz.</p>
+    </div>
+
+  </div>
+</div>
+
+
+      <!-- Sağ Taraf: Akordeon -->
+      <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
+        <div class="accordion shadow rounded-4 overflow-hidden" id="accordionAbout">
+          
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                <div class="d-flex align-items-center">
+                  <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                    <i class="bi bi-bullseye text-primary"></i>
+                  </div>
+                  <span>Misyonumuz</span>
+                </div>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionAbout">
+              <div class="accordion-body">
+                <p class="mb-0">Müşterilerimize yenilikçi ve güvenilir bilişim çözümleri sunarak, onların iş süreçlerini optimize etmelerine ve rekabet avantajı kazanmalarına yardımcı olmaktır. Sürekli olarak gelişen teknolojiyi takip ederek en güncel çözümleri sunmak misyonumuzun temelini oluşturur.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item border-0 border-top">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                <div class="d-flex align-items-center">
+                  <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                    <i class="bi bi-gem text-primary"></i>
+                  </div>
+                  <span>Değerlerimiz</span>
+                </div>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionAbout">
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Yenilikçilik ve sürekli gelişim</span>
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Kalite ve profesyonellik</span>
+                  </li>
+                  <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Ekip çalışması</span>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill text-primary me-2"></i>
+                    <span>Şeffaflık ve güvenilirlik</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--denemegithub-->
+          <div class="accordion-item border-0 border-top">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                <div class="d-flex align-items-center">
+                  <div class="icon-box bg-primary bg-opacity-10 rounded-circle p-2 me-3 flex-shrink-0">
+                    <i class="bi bi-eye text-primary"></i>
+                  </div>
+                  <span>Vizyonumuz</span>
+                </div>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionAbout">
+              <div class="accordion-body">
+                <p class="mb-0">Teknolojik yenilikler ve müşteri memnuniyetini ön planda tutarak, bilişim sektöründe öncü ve güvenilir bir marka olmaktır. Sürekli ilerleyen teknolojiyle entegre olarak sektördeki konumumuzu güçlendirmek ve liderlik hedefimizi gerçekleştirmek vizyonumuzdur.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Neden Kapoğlu Bilişim Çözümleri? - Tamamen yenilendi ve resimleri düzenlendi -->
+<section id="avantajlar" class="py-5 bg-light">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <span class="badge bg-warning text-dark mb-2 px-3 py-2 rounded-pill">NEDEN BİZİ SEÇMELİSİNİZ?</span>
+      <h2 class="display-5 fw-bold">KAPOĞLU BİLİŞİM AVANTAJLARI</h2>
+    </div>
+    
+    <div class="row g-4 align-items-center">
+      <!-- Sol Kısım: Görsel -->
+      <div class="col-lg-6 order-lg-1 order-2">
+        <div class="position-relative">
+          <!-- Ana görsel -->
+          <img src="assests/350541050_514319694121012_7972956218783170068_n-qrec7fo26c79yxgycdd50128nfh8grmzg6l1xf2kco.webp" 
+               alt="Avantajlar Görseli" 
+               class="img-fluid rounded-4 shadow-lg" 
+               style="width: 100%; height: 70vh; object-fit: cover;">
+          
+          <!-- Float olan ikinci görsel -->
+          <div class="position-absolute" style="bottom: -10%; right: -5%; width: 60%; z-index: 2;">
+            <img src="assests/391335682_174758225675579_765192739022499485_n-qrec5w7nwd5nvylw9g41fam3bma332a6hw45bjg6jc.webp" 
+                 alt="Avantajlar Görseli" 
+                 class="img-fluid rounded-4 shadow-lg border border-3 border-white" 
+                 style="width: 100%; object-fit: cover;">     
+          </div>
+          
+          <!-- Dekoratif -->
+          <div class="position-absolute bg-primary rounded-circle" 
+               style="width: 150px; height: 150px; top: -10%; left: -10%; z-index: -1; opacity: 0.1;"></div>
+        </div>
+      </div>
+      
+      <!-- Sağ Kısım: Avantajlar -->
+      <div class="col-lg-6 order-lg-2 order-1">
+        <div class="p-4">
+          <div class="mb-4">
+            <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 hover-shadow transition">
+              <div class="d-flex align-items-center">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded-4">
+                    <i class="fas fa-crown fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-4">
+                  <h3 class="h4 fw-bold mb-2">Köklü İş Deneyimi</h3>
+                  <p class="text-muted mb-0">Yılların verdiği tecrübe ile bilişim sektöründe güvenilir ve sağlam çözümler sunuyoruz.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 hover-shadow transition">
+              <div class="d-flex align-items-center">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded-4">
+                    <i class="fas fa-cogs fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-4">
+                  <h3 class="h4 fw-bold mb-2">Kullanılan Malzeme Kalitesi</h3>
+                  <p class="text-muted mb-0">En yüksek standartlarda malzeme kullanarak müşterilerimize en kaliteli hizmeti sunuyoruz.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 hover-shadow transition">
+              <div class="d-flex align-items-center">
+                <div class="flex-shrink-0">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded-4">
+                    <i class="fas fa-users fa-2x text-primary"></i>
+                  </div>
+                </div>
+                <div class="flex-grow-1 ms-4">
+                  <h3 class="h4 fw-bold mb-2">Profesyonel Çalışanlar</h3>
+                  <p class="text-muted mb-0">Alanında uzman ekibimizle projelerimizi en üst seviyede gerçekleştiriyoruz.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row g-4 mt-2">
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm h-100 bg-primary text-white text-center rounded-4 p-4">
+                <h3 class="display-5 fw-bold mb-2">600+</h3>
+                <p class="lead mb-0">Tamamlanan Proje</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <a href="tel:08508881275" class="btn btn-warning h-100 d-flex align-items-center justify-content-center fw-bold py-4 rounded-4 shadow-sm">
+                <i class="fas fa-phone-alt me-2"></i> HEMEN BİZİ ARA </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Hizmetler Section - Modernize edildi -->
+<section id="hizmetler" class="py-5 py-lg-6">
+  <div class="container py-3 py-lg-5">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">ÇÖZÜMLER</span>
+      <h2 class="fw-bold mb-3">Hizmetlerimiz</h2>
+      <p class="text-muted lead">Size özel çözümlerimizle her zaman yanınızdayız</p>
+    </div>
+    <div class="row g-4">
+      <!-- Web Geliştirme -->
+      <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 border-0 shadow-sm rounded-4 hover-shadow transition">
+          <div class="card-body p-4 text-center">
+            <div class="bg-primary bg-opacity-10 rounded-4 p-3 d-inline-flex mb-4">
+              <i class="fas fa-laptop-code fa-3x text-primary"></i>
+            </div>
+            <h5 class="card-title fw-bold mb-3">Web Geliştirme</h5>
+            <p class="card-text text-muted">Modern, responsive ve SEO dostu web siteleri tasarlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Sunucu Kurulumu -->
+      <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 border-0 shadow-sm rounded-4 hover-shadow transition">
+          <div class="card-body p-4 text-center">
+            <div class="bg-success bg-opacity-10 rounded-4 p-3 d-inline-flex mb-4">
+              <i class="fas fa-server fa-3x text-success"></i>
+            </div>
+            <h5 class="card-title fw-bold mb-3">Sunucu Kurulumu</h5>
+            <p class="card-text text-muted">Sunucu kurulumu yaparak, güçlü altyapı çözümleri sunuyoruz.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Kamera Kurulumu -->
+      <div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 border-0 shadow-sm rounded-4 hover-shadow transition">
+          <div class="card-body p-4 text-center">
+            <div class="bg-warning bg-opacity-10 rounded-4 p-3 d-inline-flex mb-4">
+              <i class="fas fa-camera fa-3x text-warning"></i>
+            </div>
+            <h5 class="card-title fw-bold mb-3">Kamera Kurulumu</h5>
+            <p class="card-text text-muted">Güvenlik sistemleri için kamera kurulumu ve izleme çözümleri sağlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+      <!-- 7/24 Destek-->
+      <div class="col-lg-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="card h-100 border-0 shadow-sm rounded-4 hover-shadow transition">
+          <div class="card-body p-4 text-center">
+            <div class="bg-danger bg-opacity-10 rounded-4 p-3 d-inline-flex mb-4">
+              <i class="fas fa-headset fa-3x text-danger"></i>
+            </div>
+            <h5 class="card-title fw-bold mb-3">7/24 Teknik Destek</h5>
+            <p class="card-text text-muted">Her an yanınızdayız! 7/24 teknik destek ve danışmanlık sağlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Partnerlerimiz-->
+<!-- <section id="referanslar" class="py-5 bg-light">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill mb-3">MÜŞTERİLERİMİZ</span>
+      <h2 class="fw-bold mb-3">Referanslarımız</h2>
+      <p class="text-muted">Hizmet verdiğimiz iş ortaklarımızdan bazıları</p>
+    </div> -->
+    
+    <!-- Logo carousel yapısı -->
+    <!-- <div class="row g-4">
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <img src="assests/img/INNOVA2.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+          </div>  
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <img src="assests/img/BAKIRCI-e1721659793198.jpg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <img src="assests/img/besiktas_shipyard_logo-e1721659622401.jpeg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <img src="assests/img/Bezmialem_Vakif_Universitesi_logosu.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <img src="assests/img/BISAR.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <img src="assests/img/eltemtek-e1721583555353.jpg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Gizli referanslar -->
+    <!-- <div class="collapse mt-4" id="moreReferances">
+      <div class="row g-4">
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/ERYA-e1721659763343.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/ETIS-e1721659749395.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/GOK-DENIZCILIKg.jpg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/hur-beton-logo-3.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/ISTANBUL-SILAH.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/KANCAMETAL.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/MAVILI.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/NEGMAR-1024x400.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/SAHPROJE.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/SMS.jpeg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/spoint.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/sulfert_logo.jpeg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests\img\TEKSAN.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests\img\TURKTELEKOM.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests/img/sulfert_logo.jpeg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests\img\VATAN.jpg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests\img\VavaCars_Logo-1024x537.jpg" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-3 hover-shadow transition">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <img src="assests\img\VERIMGUBRE.png" alt="Referans Logo" class="img-fluid" style="max-height: 60px; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+      <!-- Devamı için buton -->
+      <!-- <div class="text-center mt-4">
+        <button type="button" class="btn btn-outline-primary rounded-pill px-4 py-2" data-bs-toggle="collapse" data-bs-target="#moreReferances">Tüm Referanslarımız <i class="fas fa-chevron-down ms-2"></i>
+        </button>
+      </div> 
+      </section>
+      -->
+
+<!--Müşteri Yorumları-->
+<section id="müsteriyorumlari" class="py-5 py-lg-7 testimonials-section overflow-hidden position-relative">
+  <!-- Arkaplan Elementleri -->
+  <div class="container py-4 position-relative">
+    <!-- Başlık Alanı -->
+    <div class="row justify-content-center mb-5" data-aos="fade-up">
+      <div class="col-lg-6 text-center">
+        <h2 class="fw-bold display-5 mb-3 text-dark">Müşteri Yorumları</h2>
+        <div class="separator-center mb-4"></div>
+        <p class="lead text-muted">Müşterilerimizin KAPOĞLU BİLİŞİM hakkında değerlendirmeleri</p>
+      </div>
+    </div>
+    
+    <!-- Ana Yorumlar Slider -->
+    <div class="testimonial-slider position-relative">
+      <div class="swiper-container" id="testimonialSwiper">
+        <div class="swiper-wrapper pb-5">
+          <!-- Yorum 1 -->
+          <div class="swiper-slide h-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card bg-white rounded-4 shadow p-4 h-100 position-relative">
+              <div class="quote-icon position-absolute top-0 end-0 me-4 mt-3 text-primary opacity-10">
+                <i class="bi bi-quote fs-1"></i>
+              </div>
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">"KAPOĞLU BİLİŞİM ile çalışmak gerçekten harika bir deneyimdi. Ekip, projenin her aşamasında son derece profesyonel ve duyarlıydı. İhtiyaçlarımızı hızlı bir şekilde anlayıp, beklentilerimizin ötesinde çözümler sundular."</p>
+              <div class="testimonial-author d-flex align-items-center mt-auto">
+                <div class="author-avatar rounded-circle overflow-hidden me-3">
+                  <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Müşteri" width="60" height="60" class="img-fluid">
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Ahmet Yılmaz</h5>
+                  <p class="mb-0 text-muted small">Genel Müdür</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+          <!-- Yorum 2 -->
+          <div class="swiper-slide h-auto" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card bg-white rounded-4 shadow p-4 h-100 position-relative">
+              <div class="quote-icon position-absolute top-0 end-0 me-4 mt-3 text-primary opacity-10">
+                <i class="bi bi-quote fs-1"></i>
+              </div>
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">"Uzun süredir farklı bilişim firmalarıyla çalıştım, ancak KAPOĞLU BİLİŞİM'in sunduğu hizmet kalitesi gerçekten etkileyici. Teknik bilgileri, zamanında müdahaleleri ve proaktif yaklaşımları bizim için büyük değer yarattı. Kesinlikle tavsiye ediyorum!"</p>
+              <div class="testimonial-author d-flex align-items-center mt-auto">
+                <div class="author-avatar rounded-circle overflow-hidden me-3">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Müşteri" width="60" height="60" class="img-fluid">
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Mehmet Demir</h5>
+                  <p class="mb-0 text-muted small">Kurucu</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Yorum 3 -->
+          <div class="swiper-slide h-auto" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-card bg-white rounded-4 shadow p-4 h-100 position-relative">
+              <div class="quote-icon position-absolute top-0 end-0 me-4 mt-3 text-primary opacity-10">
+                <i class="bi bi-quote fs-1"></i>
+              </div>
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">"
+                Çok başarılı çok ince işçilikle çalışıyorlar. Burak Bey işini gerçekten biliyor."</p>
+              <div class="testimonial-author d-flex align-items-center mt-auto">
+                <div class="author-avatar rounded-circle overflow-hidden me-3">
+                  <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="Müşteri" width="60" height="60" class="img-fluid">
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Zeynep Aydın</h5>
+                  <p class="mb-0 text-muted small">Yönetici</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yorum 4 -->
+          <div class="swiper-slide h-auto" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card bg-white rounded-4 shadow p-4 h-100 position-relative">
+              <div class="quote-icon position-absolute top-0 end-0 me-4 mt-3 text-primary opacity-10">
+                <i class="bi bi-quote fs-1"></i>
+              </div>
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">"Şirketimizin dijital dönüşüm sürecinde KAPOĞLU BİLİŞİM'in katkısı çok değerliydi. Teknik uzmanlıkları ve çözüm odaklı yaklaşımları sayesinde projelerimizi zamanında ve bütçe dahilinde tamamladık. İşbirliğimizin uzun yıllar devam etmesini diliyorum."</p>
+              <div class="testimonial-author d-flex align-items-center mt-auto">
+                <div class="author-avatar rounded-circle overflow-hidden me-3">
+                  <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Müşteri" width="60" height="60" class="img-fluid">
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Ayşe Kaya</h5>
+                  <p class="mb-0 text-muted small">IT Direktörü</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yorum 5 -->
+          <div class="swiper-slide h-auto" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-card bg-white rounded-4 shadow p-4 h-100 position-relative">
+              <div class="quote-icon position-absolute top-0 end-0 me-4 mt-3 text-primary opacity-10">
+                <i class="bi bi-quote fs-1"></i>
+              </div>
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">"Ofisimizin yüksek tavan aydınlatmasını Kapoğlu Bilişim yaptı çok memnun kaldık tavsiye ediyorum herkese..."</p>
+              <div class="testimonial-author d-flex align-items-center mt-auto">
+                <div class="author-avatar rounded-circle overflow-hidden me-3">
+                  <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="Müşteri" width="60" height="60" class="img-fluid">
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Merve Yıldız</h5>
+                  <p class="mb-0 text-muted small">BT Yöneticisi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yorum 6 -->
+          <div class="swiper-slide h-auto" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-card bg-white rounded-4 shadow p-4 h-100 position-relative">
+              <div class="quote-icon position-absolute top-0 end-0 me-4 mt-3 text-primary opacity-10">
+                <i class="bi bi-quote fs-1"></i>
+              </div>
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">"
+                Güvenlik sistemlerinin inşasıyla ilgili kendileriyle çalıştık. Muhteşem iş çıkardılar."</p>
+              <div class="testimonial-author d-flex align-items-center mt-auto">
+                <div class="author-avatar rounded-circle overflow-hidden me-3">
+                  <img src="https://randomuser.me/api/portraits/women/4.jpg" alt="Müşteri" width="60" height="60" class="img-fluid">
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Aslı Avşaroğlu</h5>
+                  <p class="mb-0 text-muted small">Yönetici</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Yorum 7 -->
+          <div class="swiper-slide h-auto" data-aos="fade-up" data-aos-delay="500">
+            <div class="testimonial-card bg-white rounded-4 shadow p-4 h-100 position-relative">
+              <div class="quote-icon position-absolute top-0 end-0 me-4 mt-3 text-primary opacity-10">
+                <i class="bi bi-quote fs-1"></i>
+              </div>
+              <div class="rating mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+              </div>
+              <p class="testimonial-text mb-4">"KAPOĞLU BİLİŞİM'in güvenlik çözümleri ve sistemleri sayesinde şirketimiz artık çok daha güvende. Herhangi bir sorunla karşılaştığımızda 7/24 destek alabilmek bizim için büyük bir güven kaynağı. Tüm ekibe teşekkür ederiz."</p>
+              <div class="testimonial-author d-flex align-items-center mt-auto">
+                <div class="author-avatar rounded-circle overflow-hidden me-3">
+                  <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Müşteri" width="60" height="60" class="img-fluid">
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Murat Özkan</h5>
+                  <p class="mb-0 text-muted small">BT Yöneticisi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- Slider Kontrolleri -->
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      <!-- Slider Okları -->
+      <div class="swiper-button-next bg-white shadow-sm rounded-circle" style="width: 50px; height: 50px;"></div>
+      <div class="swiper-button-prev bg-white shadow-sm rounded-circle" style="width: 50px; height: 50px;"></div>
+    </div>
+    
+    <!-- Animasyonlu Sayılar -->
+    <div class="row counter-row g-4 mt-5" data-aos="fade-up">
+      <div class="col-6 col-md-3">
+        <div class="counter-card text-center bg-white rounded-4 shadow-sm p-4 hover-lift">
+          <div class="counter-icon bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-people-fill text-primary fs-3"></i>
+          </div>
+          <h3 class="counter-value fw-bold text-primary mb-1" data-target="756">0</h3>
+          <p class="text-muted mb-0">Mutlu Müşteri</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="counter-card text-center bg-white rounded-4 shadow-sm p-4 hover-lift">
+          <div class="counter-icon bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-laptop-fill text-primary fs-3"></i>
+          </div>
+          <h3 class="counter-value fw-bold text-primary mb-1" data-target="638">0</h3>
+          <p class="text-muted mb-0">Tamamlanan Proje</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="counter-card text-center bg-white rounded-4 shadow-sm p-4 hover-lift">
+          <div class="counter-icon bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-award-fill text-primary fs-3"></i>
+          </div>
+          <h3 class="counter-value fw-bold text-primary mb-1" data-target="15">0</h3>
+          <p class="text-muted mb-0">Yıllık Deneyim</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="counter-card text-center bg-white rounded-4 shadow-sm p-4 hover-lift">
+          <div class="counter-icon bg-primary bg-opacity-10 rounded-circle p-3 mx-auto mb-3" style="width: 70px; height: 70px;">
+            <i class="bi bi-hand-thumbs-up-fill text-primary fs-3"></i>
+          </div>
+          <h3 class="counter-value fw-bold text-primary mb-1" data-target="100">0</h3>
+          <p class="text-muted mb-0">%100 Memnuniyet</p>
+        </div>
+      </div> 
+    </div>
+    
+    <!-- Markaların Yatay Kayan Listesi -->
+    <div class="brands-section mt-5 pt-4 border-top" data-aos="fade-up">
+      <div class="row align-items-center">
+        <div class="col-lg-9">
+          <div class="brands-slider">
+            <div class="swiper-container" id="brandsSwiper">
+              <div class="swiper-wrapper align-items-center">
+                <!-- Marka Logoları (Placeholder) -->
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\besiktas_shipyard_logo-e1721659622401.jpeg" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\BAKIRCI-e1721659793198.jpg" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\Bezmialem_Vakif_Universitesi_logosu.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\BISAR.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\eltemtek-e1721583555353.jpg" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\ETIS-e1721659749395.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\ERYA-e1721659763343.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\hur-beton-logo-3.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\GOK-DENIZCILIKg.jpg" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\INNOVA2.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\ISTANBUL-SILAH.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\KANCAMETAL.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\MAVILI.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\NEGMAR-1024x400.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\SAHPROJE.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\spoint.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\sulfert_logo-Photoroom.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\TEKSAN.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\turkter-logo.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\TURKTELEKOM-Photoroom.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\VATAN.jpg" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\VavaCars_Logo-1024x537.jpg" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+                <div class="swiper-slide text-center">
+                  <div class="brand-item grayscale opacity-60 hover-opacity-100 p-3">
+                    <img src="assests\img\VERIMGUBRE.png" alt="Marka" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA Banner -->
+    <div class="cta-banner bg-primary rounded-4 p-4 p-md-5 mt-5 text-white position-relative overflow-hidden" data-aos="zoom-in">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h3 class="fw-bold mb-3">Sizin projenize özel çözümler üretiyoruz!</h3>
+          <p class="mb-0 opacity-75">Teknoloji dünyasındaki son yenilikleri ve trendleri takip ederek işinizi ileriye taşıyacak çözümler sunuyoruz.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="#iletisim" class="btn btn-lg btn-outline-light rounded-pill">Hemen İletişime Geçin</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gerekli JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<!---->
+
+
+<!-- İletişim Section -->
+<section id="iletisim" class="py-5 py-lg-6 bg-light">
+  <div class="container py-3 py-lg-5">
+    <div class="row gy-5">
+      <!-- Sol Kolon: İletişim Bilgileri ve Harita -->
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-4 position-relative pb-3">İletişim</h2>
+
+        <div class="d-flex align-items-center mb-3">
+          <a href="tel:08508881275" class="d-flex align-items-center text-decoration-none text-dark">
+            <i class="fas fa-phone me-3 icon-phone"></i>
+            <p class="mb-0 fw-medium">0850 888 12 75</p>
+          </a>
+        </div>
+
+        <div class="d-flex align-items-center mb-3">
+          <a href="mailto:info@kapoglu.com.tr" class="mb-0 fw-medium text-decoration-none text-dark">
+            <i class="fas fa-envelope me-3 icon-mail"></i>
+            info@kapoglu.com.tr
+          </a>
+        </div>
+        
+        <div class="d-flex align-items-center mb-4">
+          <i class="fas fa-map-marker-alt me-3 icon-location"></i>
+          <p class="mb-0 fw-medium">Altayçeşme Mah. Samibey Sok. No:6 Maltepe İstanbul</p>
+        </div>
+
+        <!-- Google Maps Haritası -->
+         <div class="mb-4" style="max-width: 100%; width: 100%; max-width: 410px;">
+          <div class="ratio ratio-21x9 mb-1">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.167551304278!2d29.13408137654933!3d40.93399492399484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac69fa59cb86d%3A0x7f7da6a46f4039da!2zQWx0YXnDp2XFn21lLCBTYW1pIEJleSBTay4gTm86NiwgMzQ4NDMgTWFsdGVwZS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1746015081290!5m2!1str!2str"
+              class="border-0 w-100 h-100"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+         </div>
+
+        <!-- Sosyal Medya Linkleri -->
+        <div class="social-icons d-flex gap-3 mt-4">
+
+          <div class="instagramicon">
+            <a href="https://www.instagram.com/kapoglubilisimcozumleri/" class="transition-hover" target="_blank" rel="noopener">
+              <img src="assests\icons8-instagram-50.svg" class="img-fluid social-icon" alt="Instagram">
+            </a>
+          </div>
+
+          <div class="xicon">
+            <a href="https://twitter.com/burak_kapoglu" class="transition-hover" target="_blank" rel="noopener">
+              <img src="assests\icons8-x (1)-50.svg" class="img-fluid social-icon" alt="Twitter (X)">
+            </a>
+          </div>
+
+          <div class="facebookicon">
+            <a href="#" class="transition-hover" target="_blank" rel="noopener">
+              <img src="assests\icons8-facebook-50.svg" class="img-fluid social-icon" alt="Facebook">
+            </a>
+          </div>
+          
+          <div class="youtubeicon">
+            <a href="#" class="transition-hover" target="_blank" rel="noopener">
+              <img src="assests\icons8-youtube-50.svg" class="img-fluid social-icon" alt="YouTube">
+            </a>
+          </div>
+          
+        </div>  
+      </div>
+
+<!-- Sağ Kolon: İletişim Formu -->
+<div class="col-lg-6">
+  <h2 class="fw-bold mb-4 position-relative pb-3">Bizimle İletişime Geçin</h2>
+
+  <form class="p-4 p-lg-5 bg-white rounded-4 shadow-sm" id="iletisimFormu">
+    <div class="mb-3">
+      <input type="text" class="form-control form-control-lg border-0 bg-light"
+             placeholder="Adınız Soyadınız" name="name" required
+             style="font-size: 0.9rem;">
+      <div class="invalid-feedback">Lütfen adınızı ve soyadınızı giriniz.</div>
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control form-control-lg border-0 bg-light"
+             placeholder="Mail Adresiniz" name="email" required
+             style="font-size: 0.9rem;">
+      <div class="invalid-feedback" id="emailFeedback">Geçerli bir e-posta adresi giriniz.</div>
+    </div>
+    <div class="mb-3">
+      <input type="tel" class="form-control form-control-lg border-0 bg-light"
+             placeholder="Telefon Numaranız" name="phone" required
+             style="font-size: 0.9rem;">
+      <div class="invalid-feedback" id="phoneFeedback">Geçerli bir telefon numarası giriniz.</div>
+    </div>
+    <div class="mb-4">
+      <textarea class="form-control form-control-lg border-0 bg-light" rows="5"
+                placeholder="Mesajınız" name="message" required
+                style="font-size: 0.9rem;"></textarea>
+      <div class="invalid-feedback">Lütfen mesajınızı giriniz.</div>
+    </div>
+    <button type="submit" class="btn btn-primary py-3 px-5 rounded-pill fw-semibold">Gönder</button>
+  </form>
+
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-0 opacity-75">&copy; 2025 Kapoğlu Bilişim Çözümleri</p>
+</div>
+</footer>
+
+<!-- WhatsApp Button -->
+<div id="whatsappButton" class="whatsapp-btn position-fixed bottom-0 end-0 mb-3 me-3">
+  <a id="whatsappLink" target="_blank" class="d-flex align-items-center justify-content-center"> 
+    <img src="assests\img\whatsapp-color-svgrepo-com.svg" alt="WhatsApp" class="whatsapp-icon">
+    <span class="whatsapp-text">WhatsApp Hattı</span>
+  </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="frontend\app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
+
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
