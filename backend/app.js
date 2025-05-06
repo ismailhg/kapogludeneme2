@@ -2,50 +2,77 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const axios = require("axios");
 
-const app = express(); // app burada tanımlanmalı
+const app = express();
 const port = 3000;
 
-// Middleware'ler
+// reCAPTCHA gizli anahtar
+const RECAPTCHA_SECRET = "6LeN9y8rAAAAAFti9VK9U3xk1uQs0YatBW3SXtan";
+
+// Mail hesap bilgileri
+const MAIL_USER = "ismailhgndgd@gmail.com";
+const MAIL_PASS = "satpvgpjoehbfzqc";
+const MAIL_TO = "isog183400@gmail.com";
+
+// Middleware
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-// Statik dosyalar (HTML, CSS, JS) frontend klasöründen servis edilecek
 app.use(express.static("frontend"));
 
-// Form verilerini işlemek için POST endpoint
-app.post("/submit-form", (req, res) => {
-  const { name, email, phone, message } = req.body;
+app.post("/submit-form", async (req, res) => {
+  const {
+    name,
+    email,
+    phone,
+    message,
+    "g-recaptcha-response-v2": recaptchaToken,
+  } = req.body;
 
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "ismailhgndgd@gmail.com",
-      pass: "satpvgpjoegbfzqc", // Gmail uygulama şifresi
-    },
-  });
-  // Gönderilecek e-posta içeriği
-  const mailOptions = {
-    from: email,
-    to: "isog183400@gmail.com",
-    subject: "Yeni Mesaj (Web Form)",
-    text: `Ad: ${name}\nE-posta: ${email}\nTelefon: ${phone}\nMesaj: ${message}`,
-  };
+  // reCAPTCHA token kontrolü
+  if (!recaptchaToken) {
+    return res
+      .status(400)
+      .json({ message: "Lütfen reCAPTCHA doğrulamasını tamamlayın." });
+  }
 
-  // E-posta gönderme
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log("E-posta gönderim hatası:", error);
-      res.status(500).send("Hata oluştu.");
-    } else {
-      console.log("E-posta gönderildi:", info.response);
-      res.status(200).send("Mesajınız başarıyla gönderildi!");
+  try {
+    // reCAPTCHA doğrulaması
+    const verificationURL = `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET}&response=${recaptchaToken}`;
+    const recaptchaResponse = await axios.get(verificationURL);
+
+    if (!recaptchaResponse.data.success) {
+      return res
+        .status(400)
+        .json({ message: "reCAPTCHA doğrulaması başarısız." });
     }
-  });
+
+    // Nodemailer ile e-posta gönderimi
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: MAIL_USER,
+        pass: MAIL_PASS,
+      },
+    });
+
+    const mailOptions = {
+      from: email,
+      to: MAIL_TO,
+      subject: "Yeni İletişim Formu Mesajı",
+      text: `Ad: ${name}\nE-posta: ${email}\nTelefon: ${phone}\nMesaj: ${message}`,
+    };
+
+    await transporter.sendMail(mailOptions);
+    return res.status(200).json({ message: "Mesajınız başarıyla gönderildi!" });
+  } catch (err) {
+    console.error("Hata:", err);
+    return res.status(500).json({ message: "Sunucu hatası oluştu." });
+  }
 });
 
-// Sunucu başlatılıyor
+// Sunucuyu başlat
 app.listen(port, () => {
   console.log(`✅ Sunucu çalışıyor: http://localhost:${port}`);
 });

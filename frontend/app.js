@@ -1,31 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  const navbarCollapse = document.getElementById("navbarNav");
-  const navbarToggler = document.querySelector(".navbar-toggler");
+  // Menü toggle elemanlarını seç
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuLinks = mobileMenu.querySelectorAll("a");
 
-  document.addEventListener("click", function (e) {
+  // Menü açma/kapama fonksiyonu
+  function toggleMenu() {
+    mobileMenu.classList.toggle("open");
+  }
+
+  // Hamburger menü butonuna tıklanınca
+  menuToggle.addEventListener("click", toggleMenu);
+
+  // Menü öğelerine tıklanınca menüyü kapat
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", toggleMenu);
+  });
+
+  // Sayfa herhangi bir yerine tıklanınca menüyü kapat
+  document.addEventListener("click", function (event) {
+    const isInsideMenu = mobileMenu.contains(event.target);
+    const isMenuToggle = menuToggle.contains(event.target);
+
     if (
-      !navbarCollapse.contains(e.target) &&
-      !navbarToggler.contains(e.target)
+      !isInsideMenu &&
+      !isMenuToggle &&
+      mobileMenu.classList.contains("open")
     ) {
-      if (navbarCollapse.classList.contains("show")) {
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-        bsCollapse.hide();
-      }
+      toggleMenu();
     }
   });
 
-  navLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-      if (navbarCollapse.classList.contains("show")) {
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-        bsCollapse.hide();
-      }
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+  // Hero resim geçişi
   const heroSection = document.getElementById("hero");
   const images = [
     "assests/img/image3.jpg",
@@ -36,51 +42,33 @@ document.addEventListener("DOMContentLoaded", function () {
   let next = 1;
 
   // İlk resmi hemen göster
-  heroSection.style.background = `
-      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-      url('${images[current]}') center/cover no-repeat
-    `;
+  heroSection.style.background = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${images[current]}') center/cover no-repeat`;
 
   // Arkaplan resmini değiştiren fonksiyon
   function changeBackground() {
-    // Geçiş için bir overlay div oluştur
     const overlay = document.createElement("div");
     overlay.className = "hero-overlay";
-    overlay.style.backgroundImage = `
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url('${images[next]}')
-      `;
+    overlay.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${images[next]}')`;
     heroSection.appendChild(overlay);
 
-    // Overlay'i yavaşça görünür yap
     setTimeout(() => {
       overlay.style.opacity = 1;
     }, 50);
 
-    // Geçiş tamamlandığında
     setTimeout(() => {
-      // Ana arkaplanı güncelle
-      heroSection.style.background = `
-          linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-          url('${images[next]}') center/cover no-repeat
-        `;
-      // Overlay'i kaldır
+      heroSection.style.background = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${images[next]}') center/cover no-repeat`;
       heroSection.removeChild(overlay);
 
-      // Sonraki gösterilecek resmi belirle
       current = next;
       next = (next + 1) % images.length;
     }, 1000);
   }
 
-  // Düzenli aralıklarla resimleri değiştir
   setInterval(changeBackground, 5000);
-});
 
-document.addEventListener("DOMContentLoaded", function () {
   // AOS Animasyon Başlatma
   AOS.init({
-    duration: 800,
+    duration: 600,
     once: false,
     mirror: true,
   });
@@ -103,15 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      640: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
     },
   });
 
@@ -125,15 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
       disableOnInteraction: false,
     },
     breakpoints: {
-      640: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-      1024: {
-        slidesPerView: 5,
-      },
+      640: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 },
     },
   });
 
@@ -151,11 +127,16 @@ document.addEventListener("DOMContentLoaded", function () {
         counter.innerText = Math.ceil(data + time);
         setTimeout(animate, 50);
       } else {
-        counter.innerText = value;
+        if (
+          counter.parentElement.querySelector("p").innerText === "Memnuniyet"
+        ) {
+          counter.innerText = "%" + value;
+        } else {
+          counter.innerText = value;
+        }
       }
     };
 
-    // Sayaç görünür olduğunda başlat
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -169,26 +150,21 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     observer.observe(counter);
   });
-});
 
-//Whatsapp
-document.addEventListener("DOMContentLoaded", function () {
+  // Whatsapp Linki
   const phoneNumber = "905xxxxxxxxx";
   const message = "Merhaba, websiteniz aracılığıyla size ulaşıyorum.";
   const encodedMessage = encodeURIComponent(message);
-  const whatsappLink = `https://wa.me/${905469415774}?text=${encodedMessage}`;
-
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
   document.getElementById("whatsappLink").setAttribute("href", whatsappLink);
-});
-///iletisim formu
-document.addEventListener("DOMContentLoaded", () => {
+
+  // İletişim Formu
   const form = document.getElementById("iletisimFormu");
   const emailInput = form.querySelector('input[name="email"]');
   const phoneInput = form.querySelector('input[name="phone"]');
   const emailFeedback = document.getElementById("emailFeedback");
   const phoneFeedback = document.getElementById("phoneFeedback");
 
-  // Inputmask kütüphanesini kullanarak telefon numarasına maske ekleyin
   const phoneMask = new Inputmask("+\\9\\0 (599) 999 99 99");
   phoneMask.mask(phoneInput);
 
@@ -207,7 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // E-posta doğrulama
   emailInput.addEventListener("input", () => {
     const isValid = validateEmail(emailInput.value);
     setValidationState(
@@ -220,11 +195,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const formData = new FormData(form);
 
+    const formData = new FormData(form);
     let isFormValid = true;
 
-    // Zorunlu alanları kontrol et
     form.querySelectorAll("[required]").forEach((input) => {
       if (!input.value.trim()) {
         input.classList.add("is-invalid");
@@ -235,7 +209,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const email = formData.get("email");
-
     if (!validateEmail(email)) {
       setValidationState(
         emailInput,
@@ -248,26 +221,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isFormValid) return;
 
-    const data = Object.fromEntries(formData.entries());
+    // reCAPTCHA token'ı al
+    grecaptcha.ready(function () {
+      grecaptcha
+        .execute("6LeN9y8rAAAAAPfE7KWwnfVDLhNMkXxsk2m5cbJL", {
+          action: "submit",
+        })
+        .then(async function (token) {
+          formData.append("g-recaptcha-response-v2", token);
 
-    try {
-      const response = await fetch("http://localhost:3000/submit-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+          const data = Object.fromEntries(formData.entries());
 
-      if (response.ok) {
-        alert("✅ Mesajınız başarıyla gönderildi!");
-        form.reset();
-      } else {
-        alert("❌ Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("⚠️ Sunucuya ulaşılamıyor. Lütfen daha sonra tekrar deneyin.");
-    }
+          try {
+            const response = await fetch("http://localhost:3000/submit-form", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+              alert("✅ " + result.message);
+              form.reset();
+            } else {
+              alert("❌ " + result.message);
+            }
+          } catch (error) {
+            alert(
+              "⚠️ Sunucuya ulaşılamıyor. Lütfen daha sonra tekrar deneyin."
+            );
+          }
+        });
+    });
   });
 });
