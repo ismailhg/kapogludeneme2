@@ -1,23 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Menü toggle elemanlarını seç
   const menuToggle = document.getElementById("menuToggle");
   const mobileMenu = document.getElementById("mobileMenu");
   const menuLinks = mobileMenu.querySelectorAll("a");
 
-  // Menü açma/kapama fonksiyonu
   function toggleMenu() {
     mobileMenu.classList.toggle("open");
   }
 
-  // Hamburger menü butonuna tıklanınca
   menuToggle.addEventListener("click", toggleMenu);
 
-  // Menü öğelerine tıklanınca menüyü kapat
   menuLinks.forEach((link) => {
     link.addEventListener("click", toggleMenu);
   });
 
-  // Sayfa herhangi bir yerine tıklanınca menüyü kapat
   document.addEventListener("click", function (event) {
     const isInsideMenu = mobileMenu.contains(event.target);
     const isMenuToggle = menuToggle.contains(event.target);
@@ -221,40 +216,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!isFormValid) return;
 
-    // reCAPTCHA token'ı al
-    grecaptcha.ready(function () {
-      grecaptcha
-        .execute("6LeN9y8rAAAAAPfE7KWwnfVDLhNMkXxsk2m5cbJL", {
-          action: "submit",
-        })
-        .then(async function (token) {
-          formData.append("g-recaptcha-response-v2", token);
+    const recaptchaResponse = grecaptcha.getResponse();
 
-          const data = Object.fromEntries(formData.entries());
+    if (!recaptchaResponse) {
+      alert("Lütfen reCAPTCHA doğrulamasını tamamlayın.");
+      return;
+    }
 
-          try {
-            const response = await fetch("http://localhost:3000/submit-form", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            });
+    formData.append("g-recaptcha-response", recaptchaResponse);
 
-            const result = await response.json();
+    const data = Object.fromEntries(formData.entries());
 
-            if (response.ok) {
-              alert("✅ " + result.message);
-              form.reset();
-            } else {
-              alert("❌ " + result.message);
-            }
-          } catch (error) {
-            alert(
-              "⚠️ Sunucuya ulaşılamıyor. Lütfen daha sonra tekrar deneyin."
-            );
-          }
-        });
-    });
+    try {
+      const response = await fetch("http://localhost:3000/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("✅ " + result.message);
+        form.reset();
+        grecaptcha.reset();
+      } else {
+        alert("❌ " + result.message);
+      }
+    } catch (error) {
+      alert("⚠️ Sunucuya ulaşılamıyor. Lütfen daha sonra tekrar deneyin.");
+    }
   });
 });

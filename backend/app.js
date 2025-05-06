@@ -1,8 +1,8 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
-const cors = require("cors");
 const axios = require("axios");
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
@@ -11,9 +11,9 @@ const port = 3000;
 const RECAPTCHA_SECRET = "6LeN9y8rAAAAAFti9VK9U3xk1uQs0YatBW3SXtan";
 
 // Mail hesap bilgileri
-const MAIL_USER = "ismailhgndgd@gmail.com";
-const MAIL_PASS = "satpvgpjoehbfzqc";
-const MAIL_TO = "isog183400@gmail.com";
+const MAIL_USER = "ismailhgndgd@gmail.com"; // Gönderen e-posta adresi
+const MAIL_PASS = "satpvgpjoegbfzqc"; // E-posta şifresi
+const MAIL_TO = "isog183400@gmail.com"; // Alıcı e-posta adresi
 
 // Middleware
 app.use(cors());
@@ -21,13 +21,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("frontend"));
 
+// İletişim formu verisini al ve reCAPTCHA doğrulaması yap
 app.post("/submit-form", async (req, res) => {
   const {
     name,
     email,
     phone,
     message,
-    "g-recaptcha-response-v2": recaptchaToken,
+    "g-recaptcha-response": recaptchaToken,
   } = req.body;
 
   // reCAPTCHA token kontrolü
@@ -40,7 +41,7 @@ app.post("/submit-form", async (req, res) => {
   try {
     // reCAPTCHA doğrulaması
     const verificationURL = `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET}&response=${recaptchaToken}`;
-    const recaptchaResponse = await axios.get(verificationURL);
+    const recaptchaResponse = await axios.post(verificationURL);
 
     if (!recaptchaResponse.data.success) {
       return res
